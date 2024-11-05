@@ -16,3 +16,9 @@ cd genaichatbot/
 ```bash
 source ./Scripts/activate
 ```
+
+# Run requirements.txt
+```bash
+pip install requirements.txt
+```
+
