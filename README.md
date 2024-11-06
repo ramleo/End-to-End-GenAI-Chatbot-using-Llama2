@@ -7,14 +7,9 @@
 python -m venv genaichatbot
 ```
 
-# "cd" into genaichatbot folder
-```bash
-cd genaichatbot/
-```
-
 # Activate virtual environment
 ```bash
-source ./Scripts/activate
+source ./genaichatbot/Scripts/activate
 ```
 
 # Run requirements.txt
