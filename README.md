@@ -57,14 +57,13 @@ Import packages:
 import os
 import pinecone
 from dotenv import load_dotenv
-from langchain.chains.qa_with_sources import load_qa_with_sources_chain # For using "RetrievalQA.from_chain_type" else it hallucinates.
-from langchain.chains.retrieval_qa.base import RetrievalQA
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_pinecone import PineconeVectorStore
-from langchain.document_loaders import PyPDFLoader, DirectoryLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
-from langchain.llms import CTransformers
+from langchain_community.llms import CTransformers
+from flask import Flask, render_template, request
+from src.helper import download_hf_embeddings
+from langchain_pinecone import PineconeVectorStore
+from src.prompt import *
 ```
 1. Downloading the LLM:
 
