@@ -84,7 +84,7 @@ pinecone.Pinecone(api_key=api_key)
 ```
 These lines set up the Pinecone connection.
 First, the Pinecone API key is set as an environment variable and then retrieved.
-The download_hf_embeddings() function (which was defined earlier) is called to download and initialize a Hugging Face embeddings model.
+The download_hf_embeddings() function is called to download and initialize a Hugging Face embeddings model.
 Finally, pinecone.Pinecone(api_key=api_key) initializes the Pinecone connection using the provided API key.
 
 3. Defining the Prompt Template:
@@ -148,7 +148,7 @@ which is a specialized type of chain designed for question-answering tasks that
 retrieve relevant context from a document store.
 
 `llm=llm:` This specifies the large language model (LLM) to use for generating answers.
-In this case, it's set to the llm object defined earlier (which is the Llama2 model).
+In this case, it's set to the llm object (which is the Llama2 model).
 
 `chain_type="stuff":` This sets the chain type to "stuff". 
 In a "stuff" chain, the entire retrieved context is inserted into the prompt before being sent to the LLM.
@@ -165,7 +165,7 @@ into a retriever object that can be used by the chain.
 to generate the answer in the output. This can be useful for understanding the reasoning behind the model's answer.
 
 `chain_type_kwargs=chain_type_kwargs:` This provides any additional keyword arguments specific to the chain type. 
-In this case, we're passing in the chain_type_kwargs dictionary that you defined earlier.
+In this case, we're passing in the chain_type_kwargs dictionary that was defined earlier.
 It contains the prompt template to guide the LLM's response.
 
 7. Defines a route for the web:
