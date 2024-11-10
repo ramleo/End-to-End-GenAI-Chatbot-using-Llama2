@@ -175,14 +175,14 @@ def index():
     return render_template('chat.html')
 ```
 
-`@app.route("/")`: This is a decorator. It tells Flask to associate the following function (index) with the root URL ("/") of your website.
+`@app.route("/")`: This is a decorator. It tells Flask to associate the following function (index) with the root URL ("/") of our website.
 This means when a user visits the main URL of your app, this function will be executed.
 
 `def index():`: This defines a function named "index". This function will be called when the root URL is accessed.
 
 `return render_template('chat.html')`: This is the core of what the function does.
-It uses Flask's render_template function to find an HTML file named chat.html (presumably located in a "templates" folder 
-within your project) and sends its content back to the user's web browser to be displayed.
+It uses Flask's render_template function to find an HTML file named chat.html and 
+sends its content back to the user's web browser to be displayed.
 
 9. Handling User Input and Generating Responses:
 ```
@@ -205,14 +205,14 @@ This defines the function named chat that will be executed when a request is mad
 `msg = request.form["msg"]`:
 This line retrieves the user's input from the request.
 request.form is a dictionary-like object that contains data submitted through an HTML form.
-"msg" is the name of the form field where the user's input is expected. This assumes you have an input field with name="msg" in your chat.html file.
+"msg" is the name of the form field where the user's input is expected.
 
 `input = msg:`
 This line assigns the retrieved message to a variable named input.
 
 `result = qa.invoke({"query": input})`:
 This is the core of the logic.
-It calls the invoke method of your question-answering system (qa, which you likely defined earlier in your code)
+It calls the invoke method of your question-answering system (qa)
 with the user's input as the query.
 The result of the question-answering system is stored in the result variable.
 
