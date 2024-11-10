@@ -184,7 +184,7 @@ This means when a user visits the main URL of your app, this function will be ex
 It uses Flask's render_template function to find an HTML file named chat.html and 
 sends its content back to the user's web browser to be displayed.
 
-9. Handling User Input and Generating Responses:
+8. Handling User Input and Generating Responses:
 ```
 @app.route("/get", methods=["GET", "POST"])
 def chat():
@@ -220,7 +220,7 @@ The result of the question-answering system is stored in the result variable.
 This line sends the response back to the user's web browser.
 str(result["result"]) converts the response to a string before sending it.
 
-11. Starting the Flask Application:
+9. Starting the Flask Application:
 ```
 if __name__ == '__main__':
    app.run(host="0.0.0.0", port= 8080)
@@ -230,7 +230,7 @@ It checks if the script is being run directly (as opposed to being imported as a
 If the script is being run directly, the code within this block will be executed.
 This code block starts your Flask application and makes it accessible to other devices on your network.
 
-13. Run app.py:
+10. Run app.py:
 ```
 python app.py
 ```
