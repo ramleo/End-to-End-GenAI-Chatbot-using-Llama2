@@ -109,7 +109,7 @@ chunks_embeddings = PineconeVectorStore.from_existing_index(index_name,embedding
 PROMPT = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
 chain_type_kwargs = {"prompt": PROMPT}
 ```
-`index_name` is set to "genai-chatbot", which is the name of your Pinecone index.
+`index_name` is set to "genai-chatbot", which is the name of the Pinecone index.
 `PineconeVectorStore.from_existing_index` loads the vector store from your Pinecone index using the provided index name and embeddings. 
 Using index which is already created.
 The prompt template is initialized using PromptTemplate.
@@ -155,7 +155,7 @@ This is a simple but effective way to provide context to the model.
 
 `retriever=chunks_embeddings.as_retriever(search_kwargs={"k": 2}):`
 This configures the retriever, which is responsible for fetching relevant 
-documents or information from your document store (Pinecone in this case).
+documents or information from the document store (Pinecone in this case).
 
 `chunks_embeddings.as_retriever()` converts chunks_embeddings (which is the Pinecone vector store)
 into a retriever object that can be used by the chain.
